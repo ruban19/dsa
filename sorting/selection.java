@@ -11,9 +11,12 @@ class Main {
                     minimum_index = j ;
                  }
             }
-            int temp = arr[minimum_index];
-            arr[minimum_index] = arr[i];
-            arr[i] = temp;
+            // Swap only if a smaller element was found
+            if (minimum_index != i) {
+                int temp = arr[minimum_index];
+                arr[minimum_index] = arr[i];
+                arr[i] = temp;
+            }
         }
         
         System.out.println(Arrays.toString(arr));
